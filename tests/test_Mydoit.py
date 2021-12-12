@@ -14,7 +14,7 @@ def test_write_file():
 def test_read_file():
     path, test_string = single_test_file_setup()
     write_file_content(path, test_string)
-    assert read(path) == test_string
+    assert read(path).text() == test_string
     single_test_file_teardown()
 
 def write_file_content(path, content):

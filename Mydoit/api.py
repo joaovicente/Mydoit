@@ -1,3 +1,5 @@
+from .Message import Message
+
 def write(content, destination):
     r"""
     Writes content to a destination
@@ -17,5 +19,5 @@ def read(source):
     f = open(source, 'r')
     content = f.read()
     f.close()
-    return content
+    return Message(content)
 
