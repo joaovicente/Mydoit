@@ -1,23 +1,18 @@
 from .Message import Message
+from .FileComponent import FileComponent
 
-def write(content, destination):
+def write(destination, data):
     r"""
-    Writes content to a destination
-    :param content: The string to write
+    Writes data to a destination
+    :param data: The data to write
     :param destination: The destination
     """
-    f = open(destination, "w+")
-    f.write(content)
-    f.close()
+    return FileComponent.produce(destination, data)
 
 def read(source):
     r"""
     Reads data from a source
     :param source: The source of data
-    :return a string contaning the data
+    :return the Message containing the data
     """
-    f = open(source, 'r')
-    content = f.read()
-    f.close()
-    return Message(content)
-
+    return FileComponent.consume(source)

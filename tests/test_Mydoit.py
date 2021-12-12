@@ -7,7 +7,7 @@ MY_TMP_DIR = 'tmp'
 
 def test_write_file():
     path, test_string = single_test_file_setup()
-    assert write(test_string, path) == None
+    assert write(path, test_string) == None
     assert read_file_content(path) == test_string
     single_test_file_teardown()
 

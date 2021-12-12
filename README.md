@@ -5,14 +5,23 @@
 
 ```python
 from Mydoit import read, write
-my_file_content = "One\nBrown\nFox"
-write(my_file_content, "./myFile.txt")
-read("./myFile.txt")
+
+# Write and Read from file
+write("./myFile.txt", data="One\nBrown\nFox")
+read("./myFile.txt").text() # return string
+read("./myFile.txt").show() # print
+
+# Read from HTTP
+read("https://httpbin.org/get").text()
+read("https://httpbin.org/get").show() # show formatted and color coded text
+write("https://httpbin.org/post", data='{"foo":"bar"}')  # Write with data defaults to POST
+write("https://httpbin.org/put", data='{"foo":"bar"}', options={"httpMethod": "PUT"}) 
 ```
 
 ## TODO
 - [x] Find out a project with good API structure to model this project on (see `requests` in references)
 - [x] Find out out to publish this library as a Python public repository (see `requests` in references)
+- [ ] Create HttpComponent with GET as Consumer and PUT, POST, DELETE as Producer
 - [ ] Create project in Github with do.read() and do.write()
 - [ ] CI using Travis CI (as per second reference)
 - [ ] Publish v0.1 (hello world) to Python public repository
