@@ -1,2 +1,2 @@
-pip uninstall -y Mydoit
-pip install ./dist/$(ls ./dist)
+pip3 uninstall -y Mydoit
+pip3 install ./dist/$(ls ./dist)

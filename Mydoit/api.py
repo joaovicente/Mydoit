@@ -1,6 +1,3 @@
-def hello(name):
-    return "Hello " + name
-
 def write(content, destination):
     r"""
     Writes content to a destination

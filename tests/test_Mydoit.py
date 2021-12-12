@@ -1,23 +1,20 @@
-from Mydoit import Mydoit
+from Mydoit import read, write
 import os
 import shutil
 from datetime import datetime
 
 MY_TMP_DIR = 'tmp'
 
-def test_hello():
-    assert Mydoit.hello("Joao") == "Hello Joao"
-
 def test_write_file():
     path, test_string = single_test_file_setup()
-    assert Mydoit.write(test_string, path) == None
+    assert write(test_string, path) == None
     assert read_file_content(path) == test_string
     single_test_file_teardown()
 
 def test_read_file():
     path, test_string = single_test_file_setup()
     write_file_content(path, test_string)
-    assert Mydoit.read(path) == test_string
+    assert read(path) == test_string
     single_test_file_teardown()
 
 def write_file_content(path, content):

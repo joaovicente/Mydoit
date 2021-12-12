@@ -4,15 +4,15 @@
 * https://docs.python-requests.org/en/latest/
 
 ```python
-from Mydoit import Mydoit as do
+from Mydoit import read, write
 my_file_content = "One\nBrown\nFox"
-do.write(my_file_content, "./myFile.txt")
-do.read("./myFile")
+write(my_file_content, "./myFile.txt")
+read("./myFile.txt")
 ```
 
 ## TODO
 - [x] Find out a project with good API structure to model this project on (see `requests` in references)
 - [x] Find out out to publish this library as a Python public repository (see `requests` in references)
-- [ ] Create project in Github with do.read() API
-- [ ] CI using Travis CI
+- [ ] Create project in Github with do.read() and do.write()
+- [ ] CI using Travis CI (as per second reference)
 - [ ] Publish v0.1 (hello world) to Python public repository
