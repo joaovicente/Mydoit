@@ -1,3 +1,4 @@
+from Mydoit.ComponentAdapter import ComponentAdapter
 from .Message import Message
 from .FileComponent import FileComponent
 
@@ -7,7 +8,7 @@ def write(destination, data):
     :param data: The data to write
     :param destination: The destination
     """
-    return FileComponent.produce(destination, data)
+    ComponentAdapter().write(destination, data)
 
 def read(source):
     r"""
@@ -15,4 +16,4 @@ def read(source):
     :param source: The source of data
     :return the Message containing the data
     """
-    return FileComponent.consume(source)
+    return ComponentAdapter().read(source)

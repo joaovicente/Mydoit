@@ -1,12 +1,12 @@
 from .Message import Message
 
 class FileComponent:
-    def produce(destination, content):
+    def produce(self, destination, content):
         f = open(destination, "w+")
         f.write(content)
         f.close()
 
-    def consume(source):
+    def consume(self, source):
         f = open(source, 'r')
         content = f.read()
         f.close()
