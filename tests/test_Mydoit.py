@@ -14,14 +14,28 @@ def test_write_file():
 def test_read_file():
     path, test_string = single_test_file_setup()
     write_file_content(path, test_string)
-    assert read(path).text() == test_string
+    assert isinstance(read(path).text(), str)
     single_test_file_teardown()
+
+def test_read_http():
+    url = 'https://httpbin.org/get'
+    text = read(url).text()
+    assert isinstance(text, str)
+    assert 'args' in text
+
+def test_write_http():
+    path = 'https://httpbin.org/post'
+    #TODO: Test both dictionary and JSON text
+    data = '{"foo":"bar"}'
+    text = write(url, data).text()
+    #http POST https://httpbin.org/post foo=bar
+    assert isinstance(text, str)
+    assert 'args' in text
 
 def write_file_content(path, content):
     f = open(path, "w+")
     f.write(content)
-    f.close()
-
+    f.close()    
 
 def read_file_content(path):
     f = open(path, 'r')
