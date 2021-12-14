@@ -21,7 +21,8 @@ write("https://httpbin.org/put", data={"foo":"bar"}, options={"httpMethod": "PUT
 ## TODO
 - [x] Find out a project with good API structure to model this project on (see `requests` in references)
 - [x] Find out out to publish this library as a Python public repository (see `requests` in references)
-- [ ] Create HttpComponent with GET as Consumer and PUT, POST, DELETE as Producer
+- [x] Create HttpComponent supporting GET POST, PUT as Producer
+- [ ] Color highlight `.show()` 
 - [ ] Create project in Github with do.read() and do.write()
 - [ ] CI using Travis CI (as per second reference)
 - [ ] Publish v0.1 (hello world) to Python public repository
