@@ -14,8 +14,8 @@ read("./myFile.txt").show() # print
 # Read from HTTP
 read("https://httpbin.org/get").text()
 read("https://httpbin.org/get").show() # show formatted and color coded text
-write("https://httpbin.org/post", data='{"foo":"bar"}')  # Write with data defaults to POST
-write("https://httpbin.org/put", data='{"foo":"bar"}', options={"httpMethod": "PUT"}) 
+write("https://httpbin.org/post", data={"foo":"bar"})  # Write with data defaults to POST
+write("https://httpbin.org/put", data={"foo":"bar"}, options={"httpMethod": "PUT"}) 
 ```
 
 ## TODO

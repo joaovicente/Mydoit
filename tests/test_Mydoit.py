@@ -25,12 +25,21 @@ def test_read_http():
 
 def test_write_http():
     url = 'https://httpbin.org/post'
-    #TODO: Test both dictionary and JSON text
     data = {"foo":"bar"}
-    text = write(url, data).text()
-    #http POST https://httpbin.org/post foo=bar
+    message = write(url, data)
+    text = message.text()
     assert isinstance(text, str)
     assert 'args' in text
+    assert message.body.request.method == 'POST'
+
+def test_write_http_put():
+    url = 'https://httpbin.org/put'
+    data = {"foo":"bar"}
+    message = write(url, data, options={"httpMethod":"PUT"})
+    text = message.text()
+    assert isinstance(text, str)
+    assert 'args' in text
+    assert message.body.request.method == 'PUT'
 
 def write_file_content(path, content):
     f = open(path, "w+")

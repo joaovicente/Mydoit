@@ -2,13 +2,13 @@ from Mydoit.ComponentAdapter import ComponentAdapter
 from .Message import Message
 from .FileComponent import FileComponent
 
-def write(destination, data):
+def write(destination, data, options={}):
     r"""
     Writes data to a destination
     :param data: The data to write
     :param destination: The destination
     """
-    return ComponentAdapter().write(destination, data)
+    return ComponentAdapter().write(destination, data, options)
 
 def read(source):
     r"""
