@@ -1,13 +1,13 @@
 from .Message import Message
 
 class FileComponent:
-    def produce(self, destination, content):
-        f = open(destination, "w+")
-        f.write(content)
+    def produce(self, endpoint, data):
+        f = open(endpoint, "w+")
+        f.write(data)
         f.close()
 
-    def consume(self, source):
-        f = open(source, 'r')
-        content = f.read()
+    def consume(self, endpoint):
+        f = open(endpoint, 'r')
+        data = f.read()
         f.close()
-        return Message(content)
+        return Message(data)

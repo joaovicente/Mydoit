@@ -8,7 +8,7 @@ def write(destination, data):
     :param data: The data to write
     :param destination: The destination
     """
-    ComponentAdapter().write(destination, data)
+    return ComponentAdapter().write(destination, data)
 
 def read(source):
     r"""

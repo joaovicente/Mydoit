@@ -10,13 +10,14 @@ def resolve_component(endpoint):
     return component
 
 class ComponentAdapter:
-    message = None
     def write(self, destination, data):
+        message = None
         component = resolve_component(destination)
         if isinstance(component, FileComponent):
             component.produce(destination, data)
         elif isinstance(component, HttpComponent):
             message = component.produce(destination, data)
+        return message
 
     def read(self, source):
         message = None

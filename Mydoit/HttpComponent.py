@@ -1,8 +1,14 @@
 from .Message import Message
+import requests
 
 class HttpComponent:
     def produce(self, endpoint, data=None):
-        # TODO: Make appropriate HTTP call
-        # TODO: Store response content in Message body
-        # TODO: Return message
-        return Message('some string')
+        # Make appropriate HTTP call
+        if data is None:
+            response = requests.get(url=endpoint)
+        else:
+            response = requests.post(url=endpoint, data=data)
+        # Store response content in Message body
+        message = Message(response.text)
+        # Return message
+        return message

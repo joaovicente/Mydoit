@@ -24,9 +24,9 @@ def test_read_http():
     assert 'args' in text
 
 def test_write_http():
-    path = 'https://httpbin.org/post'
+    url = 'https://httpbin.org/post'
     #TODO: Test both dictionary and JSON text
-    data = '{"foo":"bar"}'
+    data = {"foo":"bar"}
     text = write(url, data).text()
     #http POST https://httpbin.org/post foo=bar
     assert isinstance(text, str)
