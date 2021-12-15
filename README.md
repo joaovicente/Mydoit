@@ -23,6 +23,7 @@ write("https://httpbin.org/put", data={"foo":"bar"}, options={"httpMethod": "PUT
 - [x] Find out out to publish this library as a Python public repository (see `requests` in references)
 - [x] Create HttpComponent supporting GET POST, PUT as Producer
 - [x] Color highlight `.show()` 
+- [ ] Ensure module runs locally after local wheel install
 - [ ] Create project in Github with do.read() and do.write()
 - [ ] CI using Travis CI (as per second reference)
 - [ ] Publish v0.1 (hello world) to Python public repository

@@ -3,7 +3,8 @@ setup(
     name='Mydoit',
     packages=find_packages(include=['Mydoit']),
     version='0.1.0',
-    description='My first Python library',
-    author='Me',
-    license='MIT'
+    description='Mydoit library',
+    author='Joao Vicente'
+    author_email='joao.diogo.vicente@gmail.com',
+    license='Apache-2.0'
 )
