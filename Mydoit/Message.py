@@ -1,3 +1,4 @@
+from . import utils
 class Message:
     def __init__(self, body):
         self.body = body
@@ -6,4 +7,4 @@ class Message:
         return self.body
 
     def show(self):
-        print(self.body)
+        utils.mypprint(self.body)

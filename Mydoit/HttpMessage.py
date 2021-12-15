@@ -1,8 +1,9 @@
 from .Message import Message
+from . import utils
 
 class HttpMessage(Message):
     def text(self):
         return self.body.text
 
     def show(self):
-        print(self.body.text)
+        utils.mypprint(self.text())

@@ -23,6 +23,10 @@ def test_read_http():
     assert isinstance(text, str)
     assert 'args' in text
 
+def test_read_http_show():
+    url = 'https://httpbin.org/get'
+    text = read(url).show()
+
 def test_write_http():
     url = 'https://httpbin.org/post'
     data = {"foo":"bar"}
