@@ -9,12 +9,15 @@ from Mydoit import read, write
 # Write and Read from file
 write("./myFile.txt", data="One\nBrown\nFox")
 read("./myFile.txt").text() # return string
-read("./myFile.txt").show() # print
+read("./myFile.txt").show() # show formatted and color coded console output
 
-# Read from HTTP
+# HTTP GET
 read("https://httpbin.org/get").text()
-read("https://httpbin.org/get").show() # show formatted and color coded text
-write("https://httpbin.org/post", data={"foo":"bar"})  # Write with data defaults to POST
+read("https://httpbin.org/get").show() # show formatted and color coded output
+
+# HTTP POST
+write("https://httpbin.org/post", data={"foo":"bar"})  
+# HTTP PUT
 write("https://httpbin.org/put", data={"foo":"bar"}, options={"httpMethod": "PUT"}) 
 ```
 
@@ -23,7 +26,7 @@ write("https://httpbin.org/put", data={"foo":"bar"}, options={"httpMethod": "PUT
 - [x] Find out out to publish this library as a Python public repository (see `requests` in references)
 - [x] Create HttpComponent supporting GET POST, PUT as Producer
 - [x] Color highlight `.show()` 
-- [ ] Ensure module runs locally after local wheel install
+- [x] Ensure module runs locally after local wheel install
 - [ ] Create project in Github with do.read() and do.write()
 - [ ] CI using Travis CI (as per second reference)
 - [ ] Publish v0.1 (hello world) to Python public repository
