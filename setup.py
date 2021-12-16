@@ -4,7 +4,7 @@ setup(
     packages=find_packages(include=['Mydoit']),
     version='0.1.0',
     description='Mydoit library',
-    author='Joao Vicente'
+    author='Joao Vicente',
     author_email='joao.diogo.vicente@gmail.com',
     license='Apache-2.0'
 )
