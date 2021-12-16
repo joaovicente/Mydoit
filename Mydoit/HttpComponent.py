@@ -1,4 +1,4 @@
-from .HttpMessage import HttpMessage
+from Mydoit.HttpMessage import HttpMessage
 import requests
 
 class HttpComponent:

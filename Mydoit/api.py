@@ -1,6 +1,6 @@
 from Mydoit.ComponentAdapter import ComponentAdapter
-from .Message import Message
-from .FileComponent import FileComponent
+from Mydoit.Message import Message
+from Mydoit.FileComponent import FileComponent
 
 def write(destination, data, options={}):
     r"""

@@ -1,4 +1,4 @@
-from . import utils
+from Mydoit import utils
 class Message:
     def __init__(self, body):
         self.body = body

@@ -1,4 +1,4 @@
-from .Message import Message
+from Mydoit.Message import Message
 
 class FileComponent:
     def produce(self, endpoint, data):

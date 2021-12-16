@@ -1,5 +1,5 @@
-from .Message import Message
-from . import utils
+from Mydoit.Message import Message
+from Mydoit import utils
 
 class HttpMessage(Message):
     def text(self):
